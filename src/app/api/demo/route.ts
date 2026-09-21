@@ -14,7 +14,12 @@ interface Scenario {
 
 const cache: Record<string, Scenario> = {};
 
-const read = (name: string): Buffer => fs.readFileSync(path.join(process.cwd(), "public", "samples", name));
+// Safe read helper - removes leading slash if any
+const read = (name: string): Buffer => {
+  const cleanName = name.replace(/^\//, ""); // Slash hata deta hai
+  return fs.readFileSync(path.join(process.cwd(), "public", "samples", cleanName));
+};
+
 const du = (b64: string) => `data:image/jpeg;base64,${b64}`;
 
 export async function GET(req: NextRequest) {
