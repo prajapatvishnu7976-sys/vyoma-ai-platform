@@ -136,7 +136,7 @@ const PROBLEMS: { no: string; title: string; body: string; answer: string }[] = 
   {
     no: "03",
     title: "Most real questions need more than one image",
-    body: "\u201CWhat changed?\u201D needs two dates. \u201CIs it still there under monsoon cloud?\u201D needs a second sensor. Single-image demos can't answer either.",
+    body: "What changed? needs two dates. Is it still there under monsoon cloud? needs a second sensor. Single-image demos can't answer either.",
     answer: "Native bi-temporal (T1+T2) and cross-modal (optical+SAR) pair reasoning, not bolted on.",
   },
   {
@@ -513,7 +513,7 @@ export function SampleRunSection() {
         <div className="grid items-start gap-10 lg:grid-cols-2">
           <div>
             <h2 className="font-display text-3xl leading-tight font-bold text-ink md:text-4xl">
-              \u201CWhat changed here, and where?\u201D
+              What changed here, and where?
             </h2>
             <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-dim">
               Two Cartosat-class frames, a year apart. The controller reads the question, notices the bi-temporal pair,
